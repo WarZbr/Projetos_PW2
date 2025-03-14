@@ -258,28 +258,31 @@ const TechStore = () => {
       )}
 
       {/* Footer with Sections */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-links">
-            {sections.map((s) => (
-              <a 
-                key={s} 
-                href="#" 
-                className="footer-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setSection(s);
-                }}
-              >
-                {s}
-              </a>
-            ))}
-          </div>
-          <div className="copyright">
-            &copy; {new Date().getFullYear()} TechStore - Loja de Informática. Todos os direitos reservados.
-          </div>
-        </div>
-      </footer>
+<footer className="footer">
+  <div className="container">
+    <div className="footer-links">
+      {sections.map((s) => (
+        <a 
+          key={s} 
+          href="#" 
+          className="footer-link"
+          onClick={(e) => {
+            e.preventDefault();
+            setSection(s);
+          }}
+        >
+          {s}
+        </a>
+      ))}
+    </div>
+    <div className="developers-info">
+      <p>Desenvolvido por: <span className="dev-name">Bruno Gabriel</span> e <span className="dev-name">Estevão Smith</span></p>
+    </div>
+    <div className="copyright">
+      &copy; {new Date().getFullYear()} TechStore - Loja de Informática. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
     </div>
   );
 };
